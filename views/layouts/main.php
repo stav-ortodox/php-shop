@@ -9,6 +9,8 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\widgets\MenuWidget;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -29,14 +31,16 @@ AppAsset::register($this);
     <header>
         <div class="container">
             <div class="header">
-                <a href="index.html">На главную</a>
+                <a href="/">На главную</a>
                 <a href="#">Вход в админку</a>
                 <a href="#">Корзина</a>
+                <form action="<?=Url::to(['category/search'])?>" method="get">
                 <input type="text" style="padding: 5px" placeholder="Поиск..." name="search">
+                </form>
             </div>
         </div>
     </header>
-    
+
 
     <div class="container">
 <?= $content ?>
