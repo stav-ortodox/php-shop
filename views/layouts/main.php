@@ -14,6 +14,7 @@ use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
+
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
@@ -26,15 +27,14 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-<?php $this->beginBody();
-$this->title = 'Мой заголовок страницы';?>
+<?php $this->beginBody()?>
 <section class="body">
     <header>
         <div class="container">
             <div class="header">
                 <a href="/">На главную</a>
                 <a href="#">Вход в админку</a>
-                <a href="#" onclick="openCart(event)">Корзина</a>
+                <a href="#" onclick="openCart(event)">Корзина <span class="menu-quantity">(<?=$_SESSION['cart.totalQuantity'] ? $_SESSION['cart.totalQuantity'] : 0?>)</span></a>
                 <form action="<?=Url::to(['category/search'])?>" method="get">
                 <input type="text" style="padding: 5px" placeholder="Поиск..." name="search">
                 </form>
@@ -59,8 +59,15 @@ $this->title = 'Мой заголовок страницы';?>
 
 <div id="cart" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            Привет, мир!
+        <div style="padding: 15px;" class="modal-content">
+        </div>
+    </div>
+</div>
+
+<div id="order" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div style="padding: 15px;" class="modal-content">
+
         </div>
     </div>
 </div>

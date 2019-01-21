@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: User
- * Date: 016 16.01.19
- * Time: 6:31
- */
+
 
 namespace app\widgets;
 

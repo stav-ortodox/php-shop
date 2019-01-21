@@ -3,6 +3,7 @@
 use yii\helpers\Url;
 
 ?>
+<?//$this->title = $id['browser_name'];?>
 <div class="container">
     <nav class="nav nav-menu">
         <a class="nav-link active" href="/">Всё меню</a>

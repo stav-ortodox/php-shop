@@ -1,5 +1,5 @@
-<?=
-$this->title = 'Страница товара';
+<?
+$this->title = $good['name'];
 ?>
 
 <div class="container">

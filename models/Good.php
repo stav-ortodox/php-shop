@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: User
- * Date: 016 16.01.19
- * Time: 5:53
- */
+
 
 namespace app\models;
 use yii\db\ActiveRecord;
@@ -34,6 +29,7 @@ class Good extends ActiveRecord
         }
         return $catGoods;
     }
+
 
     public function getOneGood($name) {
         return Good::find()->where(['link_name' => $name])->one();

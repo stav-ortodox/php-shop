@@ -1,6 +1,8 @@
 <?=app\widgets\MenuWidget::widget()?>
-<? use yii\helpers\Url;?>
-<?= $this->title = 'Главная';?>
+<? use yii\helpers\Url;
+$this->title = 'Главная';?>
+
+<h1></h1>
 <div class="container">
     <div class="row">
 

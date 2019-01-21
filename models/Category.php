@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: User
- * Date: 016 16.01.19
- * Time: 6:33
- */
+
 
 namespace app\models;
 
@@ -21,6 +16,5 @@ class Category extends ActiveRecord {
     public function getCategories() {
         return Category::find()->asArray()->all();
     }
-
 
 }

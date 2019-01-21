@@ -1,11 +1,17 @@
+
 <?=app\widgets\MenuWidget::widget()?>
 <?php use yii\helpers\Url; ?>
+<? $this->title = $id['browser_name'];?>
+<?//='<pre>';
+var_dump($id)?>
+
 <div class="container">
     <div class="row justify-content-center">
 
 
 
         <? foreach ($goods as $good) { ?>
+
             <div class="col-4">
                 <div class="product">
                     <div class="product-img">
