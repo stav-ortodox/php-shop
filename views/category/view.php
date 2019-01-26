@@ -2,8 +2,8 @@
 <?=app\widgets\MenuWidget::widget()?>
 <?php use yii\helpers\Url; ?>
 <? $this->title = $id['browser_name'];?>
-<?//='<pre>';
-var_dump($id)?>
+<?////='<pre>';
+//var_dump($id)?>
 
 <div class="container">
     <div class="row justify-content-center">
